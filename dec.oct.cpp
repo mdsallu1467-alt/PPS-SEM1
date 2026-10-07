@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main()
+{
+int deci,bin=0,i=1,rem;
+printf("enter number in decimal");
+scanf("%d",&deci);
+while(deci!=0)
+{
+rem=deci%8;
+bin=bin+rem*i;
+i=i*10;
+deci=deci/8;       
+}
+printf("%d",bin);
+return 0;
+}
