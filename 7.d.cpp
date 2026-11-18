@@ -1,38 +1,25 @@
 #include<stdio.h>
-int main ()
+int main()
 {
-	int A[2][2],i,j;
-	
-	printf("enter 4 values for  matrix A");
-	for(i=0;i<2;i++)
-	for(j=0;j<2;j++)
-	scanf("%d",&A[i][j]);
-	
-	
-	printf("\n A matrix=\n");
-	for(i=0;i<2;i++)
+	int A[5],i,key,s=0;
+	printf("enter all 5 element\n");
+	for(i=0;i<5;i++)
+	scanf("%d",&A[i]);
+	printf("enter searching element\n");
+	scanf("%d",&key);
+	for(i=0;i<5;i++)
 	{
-	
-	for(j=0;j<2;j++)
-	scanf("%d\t",&A[i][j]);
-	printf("\n");
-   }
-	printf("\n transpose of A matrix=\n");
-	for(i=0;i<2;i++)
-	{
-		for(j=0;j<2;j++)
-		printf("%d\t",A[i][j]);
-		printf("\n");
+		if (key==A[i])
+		{
+			s=1;
 		
+		
+		printf("Element found a %d",i+1);
+		break;
 	}
+   }
+    if(s==0)
+		     printf("element not found");
 	
-	
-	printf("\n transpose of A matrix=\n");
-	for(i=0;i<2;i++)
-	{
-		for(j=0;j<2;j++)
-		printf("%d\t",A[i][j]);
-		printf("\n");
-	}
 	return 0;
 }
